@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laura – Portfolio</title>
+  <meta name="description" content="Software developer - selected projects, skills and contact details." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Laura – Portfolio" />
+  <meta property="og:description" content="Selected projects, skills and contact details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/avatar.svg" />
+
+  <link rel="icon" href="assets/avatar.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true">◆</span>
+        <span class="brand__text">Laura</span>
+      </a>
+
+      <nav class="nav" aria-label="Main menu">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Expertise</a>
+        <a href="#about">About me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button id="themeToggle" class="btn btn--ghost" type="button" aria-pressed="false" aria-label="Change theme">
+          <span class="icon" aria-hidden="true">☾</span>
+          <span class="btn__text">Theme</span>
+        </button>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="badge">Software Developer • Web • UI</p>
+          <h1>I create clear user interfaces and reliable web solutions</h1>
+          <p class="lead">
+            Portfolio containing projects, technologies and brief case descriptions - in an easy-to-browse format.
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#projects">See projects</a>
+            <a class="btn btn--ghost" href="#about">Read more</a>
+          </div>
+
+          <div class="chips" aria-label="Key technologies">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">A11y</span>
+            <span class="chip">Performance</span>
+          </div>
+        </div>
+
+        <div class="hero__card" aria-label="Profile card">
+          <div class="card">
+            <div class="card__header">
+              <img class="avatar" src="assets/avatar.svg" alt="Avatar" />
+              <div>
+                <div class="title">Laura</div>
+                <div class="muted">Software developer</div>
+              </div>
+            </div>
+            <div class="card__body">
+              <dl class="stats">
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Front-end + UX</dd>
+                </div>
+                <div>
+                  <dt>Values</dt>
+                  <dd>Clarity, quality, accessibility</dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Finland, Oulu</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--ghost btn--small" href="https://github.com/Llaamari" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--ghost btn--small" href="https://www.linkedin.com/in/laura-simila/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn btn--small" href="#contact">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Projects</h2>
+            <p class="muted">The projects come from the <code>data/projects.json</code> file. Just add a new object.</p>
+          </div>
+
+          <div class="controls">
+            <label class="field">
+              <span class="sr">Search</span>
+              <input id="search" type="search" placeholder="Search: name, tags, technologies..." autocomplete="off" />
+            </label>
+
+            <label class="field">
+              <span class="sr">Filter</span>
+              <select id="filter">
+                <option value="all">All</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div id="projectsGrid" class="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Expertise</h2>
+            <p class="muted">A concise "what I can do" section that looks good to recruiters.</p>
+          </div>
+        </div>
+
+        <div class="skills">
+          <article class="panel">
+            <h3>Front-end</h3>
+            <ul>
+              <li>Semantic HTML, component-based structure</li>
+              <li>Modern CSS (grid, clamp, prefers-reduced-motion)</li>
+              <li>Vanilla JS: data → UI, state, modals, filtering</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Quality</h3>
+            <ul>
+              <li>Accessibility (keyboard, contrast, ARIA)</li>
+              <li>Performance (lightweight, no framework dependencies)</li>
+              <li>Clear coding style + documentation</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Cooperation</h3>
+            <ul>
+              <li>Communication & clarification of specifications</li>
+              <li>Iteration based on feedback</li>
+              <li>Reasonable scope and delivery reliability</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div>
+          <h2>About me</h2>
+          <p>
+            I am a software developer who particularly values clarity, accessibility and sustainable structure in user interfaces. This portfolio is intenionally "framework-free" to make it easy to read and maintain.
+          </p>
+          <p class="muted">
+            Tip: Add a 3-5 sentence story here (what you specialize in, what kind of projects you are looking for, what motivates you).
+          </p>
+        </div>
+
+        <div class="timeline" aria-label="Timeline">
+          <div class="timeline__item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <div class="kicker">Now</div>
+              <div class="title">Portfolio + projects</div>
+              <p class="muted">I compile the strongest works and turn them into clear case descriptions.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <div class="kicker">Focus</div>
+              <div class="title">Front-end & UX</div>
+              <p class="muted">Small details: keyboard shortcuts, contrasts, micro-interactions.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <div class="kicker">Working method</div>
+              <div class="title">Iteration</div>
+              <p class="muted">I will quickly build a working version and improve it based on data/feedback.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+      <div class="container contact">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Lightweight, static connection-no backend. You can switch from mailto → Formspark/Netlify later.</p>
+        </div>
+
+        <form class="form" onsubmit="return false" aria-label="Contact form">
+          <label class="field">
+            <span>Name</span>
+            <input id="name" type="text" placeholder="First name Last name" />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input id="email" type="email" placeholder="name@domain.fi" />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea id="message" rows="5" placeholder="What would you like to discuss?"></textarea>
+          </label>
+          <div class="form__actions">
+            <button id="mailtoBtn" class="btn" type="button">Send by email</button>
+            <p class="muted small">Or: <a href="https://github.com/Llaamari" target="_blank" rel="noreferrer">GitHub</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted small">© <span id="year"></span> Laura</span>
+      <a class="muted small" href="#main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <dialog id="modal" class="modal" aria-label="Additional information about the project">
+    <div class="modal__inner">
+      <button id="closeModal" class="btn btn--ghost btn--small modal__close" type="button">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </dialog>
+
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>
