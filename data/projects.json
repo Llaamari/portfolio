@@ -1,0 +1,35 @@
+[
+  {
+    "title": "UI Component Gallery",
+    "category": "Front-end",
+    "description": "Small component gallery: cards, modals, forms and theme switching. Focus: accessibility and clear structure.",
+    "tech": ["HTML", "CSS", "JavaScript", "A11y"],
+    "highlights": ["Keyboard support", "Contrasts tested", "Lightweight architecture"],
+    "links": {
+      "repo": "https://github.com/yourname/ui-component-gallery",
+      "demo": "https://yourname.github.io/ui-component-gallery/"
+    }
+  },
+  {
+    "title": "Taskboard (Vanilla)",
+    "category": "Web App",
+    "description": "Kanban-style taskboard with localStorage saving. Drag & drop style can be added later. ",
+    "tech": ["JavaScript", "LocalStorage", "CSS Grid"],
+    "highlights": ["CRUD", "Filtering", "Persistence"],
+    "links": {
+      "repo": "https://github.com/yourname/taskboard-vanilla",
+      "demo": "https://yourname.github.io/taskboard-vanilla/"
+    }
+  },
+  {
+    "title": "API Dashboard Mock",
+    "category": "UI/UX",
+    "description": "Dashboard view with responsive layout and realistic UI patterns (empty states, loading states).",
+    "tech": ["HTML", "CSS", "Design"],
+    "highlights": ["Empty/Loading states", "Responsiveness", "Clear typography"],
+    "links": {
+      "repo": "https://github.com/yourname/api-dashboard-mock",
+      "demo": "https://yourname.github.io/api-dashboard-mock/"
+    }
+  }
+]
