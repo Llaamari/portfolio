@@ -367,7 +367,7 @@ input, select, textarea{
   align-items:center;
   place-items: center;
   border: none;
-  padding: 0;
+  padding: 16px;
   background: transparent;
 }
 
@@ -385,7 +385,7 @@ input, select, textarea{
 
 .lightbox__close {
   position: static; /* removes overlap */
-  margin: 0 0 12px;
+  margin: 0 12px 12px 0; /* detached from the edge */
   align-self: flex-end;
   top: 16px;
   right: 16px;
