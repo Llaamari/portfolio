@@ -95,22 +95,29 @@ function render() {
     el.tabIndex = 0;
     el.setAttribute("role", "button");
     el.setAttribute("aria-label", `Open project: ${p.title}`);
-
+    
+    const previewImage = p.images?.[0]
+    ? `<img class="project__image" src="${p.images[0]}" alt="" loading="lazy" />`
+    : "";
+    
     el.innerHTML = `
-      <div class="project__top">
-        <div>
-          <h3 class="project__title">${escapeHtml(p.title)}</h3>
-          <div class="muted small">${escapeHtml(p.category)}</div>
-        </div>
-        <span class="kbd">Enter</span>
-      </div>
-
-      <p class="muted">${escapeHtml(p.description)}</p>
-
-      <div class="tagrow" aria-label="Technologies">
-        ${(p.tech || []).slice(0, 6).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
-      </div>
+    ${previewImage}
+    
+    <div class="project__top">
+    <div>
+    <h3 class="project__title">${escapeHtml(p.title)}</h3>
+    <div class="muted small">${escapeHtml(p.category)}</div>
+    </div>
+    <span class="kbd">Enter</span>
+    </div>
+    
+    <p class="muted">${escapeHtml(p.description)}</p>
+    
+    <div class="tagrow">
+    ${(p.tech || []).slice(0, 6).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
+    </div>
     `;
+
 
     const open = () => openModal(p);
     el.addEventListener("click", open);
