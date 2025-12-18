@@ -221,7 +221,14 @@ function openModal(p) {
 }
 
 function closeModal() {
-  if (els.modal.open) els.modal.close();
+  // Close the lightbox first, if open
+  if (els.imageLightbox?.open) {
+    els.imageLightbox.close();
+  }
+
+  if (els.modal.open) {
+    els.modal.close();
+  }
 }
 
 async function loadProjects() {
@@ -265,12 +272,16 @@ function initHandlers() {
 
   // Lightbox close handlers
   els.closeLightbox.addEventListener("click", () => {
-    if (els.imageLightbox.open) els.imageLightbox.close();
+    if (els.imageLightbox.open) {
+      els.imageLightbox.close();
+      els.lightboxImage.src = "";
+    }
   });
 
   els.imageLightbox.addEventListener("click", (e) => {
     if (e.target === els.imageLightbox) {
       els.imageLightbox.close();
+      els.lightboxImage.src = "";
     }
   });
 
