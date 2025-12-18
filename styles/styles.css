@@ -116,6 +116,10 @@ p{margin: 0 0 12px}
   background-color: #0b1220; /* sama kuin --bg */
   color: var(--text);
 }
+:root:not([data-theme="light"]) select:focus {
+  outline: 3px solid rgba(125, 211, 252, 0.35);
+  outline-offset: 2px;
+}
 
 /* ===== Hero ===== */
 .hero{padding: 46px 0 10px}
@@ -204,7 +208,14 @@ input, select, textarea{
   transition: transform .12s ease;
   cursor: pointer;
 }
-.project:hover{transform: translateY(-2px)}
+.project:hover{
+  transform: translateY(-2px)
+}
+
+.project:focus-visible {
+  outline: 3px solid rgba(125, 211, 252, 0.45);
+  outline-offset: 2px;
+}
 .project__top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
 .project__title{font-weight:800; margin:0 0 6px}
 .tagrow{display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px}
@@ -285,6 +296,9 @@ input, select, textarea{
 :root:not([data-theme="light"]) .modal__inner h4 {
   color: var(--text);
 }
+:root:not([data-theme="light"]) .modal__inner h3 {
+  font-weight: 800;
+}
 
 :root:not([data-theme="light"]) .modal__inner p,
 :root:not([data-theme="light"]) .modal__inner li {
@@ -297,6 +311,14 @@ input, select, textarea{
 
 :root:not([data-theme="light"]) .modal__inner .btn--ghost {
   color: var(--muted);
+}
+
+/* Contact form – Send button text color (dark theme only) */
+:root:not([data-theme="light"]) .contact .btn {
+  color: var(--muted);
+}
+:root:not([data-theme="light"]) .contact .btn:hover {
+  color: var(--text);
 }
 
 /* ===== Responsive ===== */
