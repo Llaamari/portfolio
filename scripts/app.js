@@ -26,48 +26,57 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
   const pressed = theme === "light";
   els.themeToggle.setAttribute("aria-pressed", String(pressed));
-  els.themeToggle.querySelector(".icon").textContent = theme === "light" ? "☀" : "☾";
+  els.themeToggle.querySelector(".icon").textContent =
+    theme === "light" ? "☀" : "☾";
 }
 
 function initTheme() {
   const saved = localStorage.getItem("theme");
   if (saved) return setTheme(saved);
-  const prefersLight = window.matchMedia?.("(prefers-color-scheme: light)")?.matches;
+  const prefersLight = window
+    .matchMedia?.("(prefers-color-scheme: light)")?.matches;
   setTheme(prefersLight ? "light" : "dark");
 }
 
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, (m) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#039;"
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#039;",
   }[m]));
 }
 
 function projectMatches(p, q) {
   if (!q) return true;
   const hay = [
-    p.title, p.category, p.description,
+    p.title,
+    p.category,
+    p.description,
     ...(p.tech || []),
-    ...(p.highlights || [])
-  ].join(" ").toLowerCase();
+    ...(p.highlights || []),
+  ]
+    .join(" ")
+    .toLowerCase();
   return hay.includes(q.toLowerCase());
 }
 
 function getVisibleProjects() {
   return state.projects
-    .filter(p => state.filter === "all" ? true : p.category === state.filter)
-    .filter(p => projectMatches(p, state.q));
+    .filter((p) => (state.filter === "all" ? true : p.category === state.filter))
+    .filter((p) => projectMatches(p, state.q));
 }
 
 function fillCategories() {
-  // reset options except "all"
   const keep = els.filter.querySelector('option[value="all"]');
   els.filter.innerHTML = "";
   els.filter.appendChild(keep);
 
   [...state.categories]
-    .filter(c => c !== "all")
+    .filter((c) => c !== "all")
     .sort((a, b) => a.localeCompare(b, "fi"))
-    .forEach(cat => {
+    .forEach((cat) => {
       const opt = document.createElement("option");
       opt.value = cat;
       opt.textContent = cat;
@@ -95,29 +104,31 @@ function render() {
     el.tabIndex = 0;
     el.setAttribute("role", "button");
     el.setAttribute("aria-label", `Open project: ${p.title}`);
-    
-    const previewImage = p.images?.[0]
-    ? `<img class="project__image" src="${p.images[0]}" alt="" loading="lazy" />`
-    : "";
-    
-    el.innerHTML = `
-    ${previewImage}
-    
-    <div class="project__top">
-    <div>
-    <h3 class="project__title">${escapeHtml(p.title)}</h3>
-    <div class="muted small">${escapeHtml(p.category)}</div>
-    </div>
-    <span class="kbd">Enter</span>
-    </div>
-    
-    <p class="muted">${escapeHtml(p.description)}</p>
-    
-    <div class="tagrow">
-    ${(p.tech || []).slice(0, 6).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
-    </div>
-    `;
 
+    const previewImage = p.images?.[0]
+      ? `<img class="project__image" src="${p.images[0]}" alt="" loading="lazy" />`
+      : "";
+
+    el.innerHTML = `
+      ${previewImage}
+
+      <div class="project__top">
+        <div>
+          <h3 class="project__title">${escapeHtml(p.title)}</h3>
+          <div class="muted small">${escapeHtml(p.category)}</div>
+        </div>
+        <span class="kbd">Enter</span>
+      </div>
+
+      <p class="muted">${escapeHtml(p.description)}</p>
+
+      <div class="tagrow" aria-label="Technologies">
+        ${(p.tech || [])
+          .slice(0, 6)
+          .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
+          .join("")}
+      </div>
+    `;
 
     const open = () => openModal(p);
     el.addEventListener("click", open);
@@ -134,21 +145,44 @@ function render() {
 
 function openModal(p) {
   const links = p.links || {};
-  const repo = links.repo ? `<a class="btn btn--ghost btn--small" href="${links.repo}" target="_blank" rel="noreferrer">Repo</a>` : "";
-  const demo = links.demo ? `<a class="btn btn--small" href="${links.demo}" target="_blank" rel="noreferrer">Live demo</a>` : "";
+  const repo = links.repo
+    ? `<a class="btn btn--ghost btn--small" href="${links.repo}" target="_blank" rel="noreferrer">Repo</a>`
+    : "";
+  const demo = links.demo
+    ? `<a class="btn btn--small" href="${links.demo}" target="_blank" rel="noreferrer">Live demo</a>`
+    : "";
+
+  const images = (p.images || [])
+    .map(
+      (src) => `
+        <img
+          class="modal__image"
+          src="${src}"
+          alt=""
+          loading="lazy"
+        />
+      `
+    )
+    .join("");
 
   els.modalContent.innerHTML = `
+    ${images}
+
     <h3>${escapeHtml(p.title)}</h3>
     <p class="muted">${escapeHtml(p.description)}</p>
 
     <div class="tagrow" aria-label="Technologies">
-      ${(p.tech || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
+      ${(p.tech || [])
+        .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
+        .join("")}
     </div>
 
-    ${(p.highlights?.length)
+    ${p.highlights?.length
       ? `<h4>Highlights</h4>
          <ul class="muted">
-           ${p.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join("")}
+           ${p.highlights
+             .map((h) => `<li>${escapeHtml(h)}</li>`)
+             .join("")}
          </ul>`
       : ""}
 
@@ -161,7 +195,6 @@ function openModal(p) {
   if (typeof els.modal.showModal === "function") {
     els.modal.showModal();
   } else {
-    // Fallback: if the dialog does not support
     alert(`${p.title}\n\n${p.description}`);
   }
 }
@@ -200,11 +233,12 @@ function initHandlers() {
 
   els.closeModal.addEventListener("click", closeModal);
   els.modal.addEventListener("click", (e) => {
-    // close when clicking on the background
     const rect = els.modalContent.getBoundingClientRect();
     const inside =
-      e.clientX >= rect.left && e.clientX <= rect.right &&
-      e.clientY >= rect.top && e.clientY <= rect.bottom;
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom;
     if (!inside) closeModal();
   });
 
