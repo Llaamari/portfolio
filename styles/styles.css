@@ -314,7 +314,7 @@ input, select, textarea{
   border: 1px solid var(--line);
   background: var(--bg);
   box-shadow: var(--shadow);
-  padding: 16px;
+  padding: 56px 16px 16px;
   position: relative;
 }
 .modal__close{position:absolute; right:14px; top:14px}
