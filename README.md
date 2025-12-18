@@ -70,6 +70,5 @@ http://localhost:8000
 
 ## 📬 Contact
 
-Please contact via the form on the portfolio page or via GitHub.
+Please contact via the form on the portfolio page or via GitHub.<br>
 © Laura
----
