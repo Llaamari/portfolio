@@ -106,6 +106,17 @@ p{margin: 0 0 12px}
   color: var(--text);
 }
 
+/* Select (filter) – dark theme readability */
+:root:not([data-theme="light"]) select {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) select option {
+  background-color: #0b1220; /* sama kuin --bg */
+  color: var(--text);
+}
+
 /* ===== Hero ===== */
 .hero{padding: 46px 0 10px}
 .hero__grid{
