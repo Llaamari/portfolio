@@ -1,5 +1,16 @@
 [
   {
+    "title": "Portfolio Website",
+    "category": "Front-end",
+    "description": "My personal portfolio website. Focus: minimal design, accessibility and responsiveness.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "highlights": ["Responsive design", "Accessible navigation", "Clean code structure"],
+    "links": {
+      "repo": "https://github.com/Llaamari/portfolio",
+      "demo": "https://llaamari.github.io/portfolio/"
+    }
+  },
+  {
     "title": "UI Component Gallery",
     "category": "Front-end",
     "description": "Small component gallery: cards, modals, forms and theme switching. Focus: accessibility and clear structure.",
