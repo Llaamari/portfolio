@@ -362,6 +362,10 @@ input, select, textarea{
 
 /* Lightbox */
 .lightbox {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  place-items: center;
   border: none;
   padding: 0;
   background: transparent;
@@ -380,7 +384,9 @@ input, select, textarea{
 }
 
 .lightbox__close {
-  position: absolute;
+  position: static; /* removes overlap */
+  margin: 0 0 12px;
+  align-self: flex-end;
   top: 16px;
   right: 16px;
   z-index: 2;
