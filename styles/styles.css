@@ -302,6 +302,9 @@ input, select, textarea{
 }
 .modal::backdrop{background: rgba(0,0,0,.55)}
 .modal__inner{
+  row-gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 7vh auto 0;
   max-width: 760px;
   width: min(92vw, 760px);
@@ -311,6 +314,23 @@ input, select, textarea{
   box-shadow: var(--shadow);
   padding: 16px;
   position: relative;
+}
+
+/* Wrap images into a grid */
+.modal__inner > .modal__image {
+  justify-self: center;
+}
+
+.modal__inner:has(.modal__image) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 12px;
+  grid-auto-rows: auto;
+}
+
+/* Create image grid */
+.modal__inner > .modal__image:first-of-type {
+  margin-top: 0;
 }
 .modal__close{position:absolute; right:14px; top:14px}
 .modal h3{margin-top: 2px}
