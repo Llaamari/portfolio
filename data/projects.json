@@ -17,14 +17,17 @@
     }
   },
   {
-    "title": "UI Component Gallery",
-    "category": "Front-end",
-    "description": "Small component gallery: cards, modals, forms and theme switching. Focus: accessibility and clear structure.",
-    "tech": ["HTML", "CSS", "JavaScript", "A11y"],
-    "highlights": ["Keyboard support", "Contrasts tested", "Lightweight architecture"],
+    "title": "Business Analytics SQL Project",
+    "category": "Data Analytics",
+    "description": "A portfolio-ready SQL analytics project that simulates a real-world sales database. The project demonstrates data modeling, advanced SQL querying and business insight generation using PostgreSQL. It answers key business questions around revenue growth, customer lifetime value and retention through cohort analysis.",
+    "tech": ["PostgreSQL", "SQL", "Docker"],
+    "highlights": ["Designed a relational data model optimized for analytical queries", "Built advanced SQL analyses including cohort-based customer retention", "Translated raw query results into actionable business insights"],
+    "images": [
+      "assets/projects/sql-business-analytics-1.png",
+      "assets/projects/sql-business-analytics-2.png"
+    ],
     "links": {
-      "repo": "https://github.com/yourname/ui-component-gallery",
-      "demo": "https://yourname.github.io/ui-component-gallery/"
+      "repo": "https://github.com/Llaamari/sql-business-analytics"
     }
   },
   {
@@ -36,17 +39,6 @@
     "links": {
       "repo": "https://github.com/yourname/taskboard-vanilla",
       "demo": "https://yourname.github.io/taskboard-vanilla/"
-    }
-  },
-  {
-    "title": "API Dashboard Mock",
-    "category": "UI/UX",
-    "description": "Dashboard view with responsive layout and realistic UI patterns (empty states, loading states).",
-    "tech": ["HTML", "CSS", "Design"],
-    "highlights": ["Empty/Loading states", "Responsiveness", "Clear typography"],
-    "links": {
-      "repo": "https://github.com/yourname/api-dashboard-mock",
-      "demo": "https://yourname.github.io/api-dashboard-mock/"
     }
   }
 ]
