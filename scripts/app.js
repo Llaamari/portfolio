@@ -154,6 +154,16 @@ function openLightbox(src) {
   els.imageLightbox.showModal();
 }
 
+function closeLightbox() {
+  if (els.imageLightbox?.open) {
+    els.imageLightbox.close();
+  }
+
+  // important: clear the image and remove the focus
+  els.lightboxImage.src = "";
+  document.activeElement?.blur();
+}
+
 function openModal(p) {
   const links = p.links || {};
   const repo = links.repo
@@ -221,10 +231,8 @@ function openModal(p) {
 }
 
 function closeModal() {
-  // Close the lightbox first, if open
-  if (els.imageLightbox?.open) {
-    els.imageLightbox.close();
-  }
+  // Always close the lightbox first
+  closeLightbox();
 
   if (els.modal.open) {
     els.modal.close();
@@ -271,23 +279,17 @@ function initHandlers() {
   });
 
   // Lightbox close handlers
-  els.closeLightbox.addEventListener("click", () => {
-    if (els.imageLightbox.open) {
-      els.imageLightbox.close();
-      els.lightboxImage.src = "";
-    }
-  });
+  els.closeLightbox.addEventListener("click", closeLightbox);
 
   els.imageLightbox.addEventListener("click", (e) => {
     if (e.target === els.imageLightbox) {
-      els.imageLightbox.close();
-      els.lightboxImage.src = "";
+      closeLightbox();
     }
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      if (els.imageLightbox.open) els.imageLightbox.close();
+      if (els.imageLightbox.open) closeLightbox();
       else closeModal();
     }
   });
