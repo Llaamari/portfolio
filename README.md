@@ -58,7 +58,7 @@ Open the project directly in your browser or use a small local server:
 ```bash
 python -m http.server 8000
 ```
-And open:
+And open:<br>
 http://localhost:8000
 
 ## 🎯 Project objectives
