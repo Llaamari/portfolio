@@ -245,12 +245,17 @@ input, select, textarea{
 
 /* Modal images */
 .modal__image {
+  cursor: zoom-in;
+  transition: transform 0.15s ease;
   width: 100%;
   border-radius: 16px;
   border: 1px solid var(--line);
 }
 .modal__image:last-of-type {
   margin-bottom: 20px;
+}
+.modal__image:hover {
+  transform: scale(1.02);
 }
 .tagrow{display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px}
 .tag{
