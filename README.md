@@ -62,12 +62,14 @@ And open:
 http://localhost:8000
 
 ## 🎯 Project objectives
+
 - Demonstrate expertise in front-end development and UI refinement
 - Keep code clear, readable and easy to maintain
 - Demonstrate an understanding of accessibility and user experience
 - Serve as a realistic, production-level portfolio example
 
 ## 📬 Contact
+
 Please contact via the form on the portfolio page or via GitHub.
 © Laura
 ---
