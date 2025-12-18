@@ -1,10 +1,10 @@
 [
   {
-    "title": "Portfolio Website",
+    "title": "Personal Portfolio Website",
     "category": "Front-end",
-    "description": "My personal portfolio website. Focus: minimal design, accessibility and responsiveness.",
+    "description": "A personal portfolio showcasing my projects, skills and working methods. The site has been built without frameworks and focuses on clear structure, good user experience and accessibility.",
     "tech": ["HTML", "CSS", "JavaScript"],
-    "highlights": ["Responsive design", "Accessible navigation", "Clean code structure"],
+    "highlights": ["Responsive and accessible user interface", "Projects loaded from JSON file and displayed in modal", "Dark/light theme with localStorage support"],
     "images": [
       "assets/projects/portfolio-website-1.png",
       "assets/projects/portfolio-website-2.png",
