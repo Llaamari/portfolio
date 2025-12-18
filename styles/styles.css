@@ -360,6 +360,17 @@ input, select, textarea{
   color: var(--text);
 }
 
+/* Lightbox Close button – dark theme contrast */
+:root:not([data-theme="light"]) .lightbox__close {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:root:not([data-theme="light"]) .lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 /* Lightbox */
 .lightbox {
   display: flex;
