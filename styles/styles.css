@@ -265,6 +265,29 @@ input, select, textarea{
 .modal h3{margin-top: 2px}
 .modal .muted{margin-bottom: 10px}
 
+/* Modal – text colors fix in dark theme */
+:root:not([data-theme="light"]) .modal__inner {
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .modal__inner h3,
+:root:not([data-theme="light"]) .modal__inner h4 {
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .modal__inner p,
+:root:not([data-theme="light"]) .modal__inner li {
+  color: var(--muted);
+}
+
+:root:not([data-theme="light"]) .modal__inner .btn {
+  color: var(--text);
+}
+
+:root:not([data-theme="light"]) .modal__inner .btn--ghost {
+  color: var(--muted);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 960px){
   .grid{grid-template-columns: repeat(2, minmax(0,1fr))}
