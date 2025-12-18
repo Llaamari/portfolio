@@ -101,6 +101,11 @@ p{margin: 0 0 12px}
 .btn--small{padding:8px 12px; border-radius: 12px}
 .btn:focus{outline: 3px solid rgba(125,211,252,.35); outline-offset: 2px}
 
+/* Theme button: white text in dark theme */
+:root:not([data-theme="light"]) #themeToggle {
+  color: var(--text);
+}
+
 /* ===== Hero ===== */
 .hero{padding: 46px 0 10px}
 .hero__grid{
