@@ -9,7 +9,6 @@ const els = {
   modal: $("#modal"),
   modalContent: $("#modalContent"),
   closeModal: $("#closeModal"),
-  mailtoBtn: $("#mailtoBtn"),
   name: $("#name"),
   email: $("#email"),
   message: $("#message"),
@@ -204,20 +203,6 @@ function initHandlers() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
-  });
-
-  els.mailtoBtn.addEventListener("click", () => {
-    const name = els.name.value.trim();
-    const email = els.email.value.trim();
-    const msg = els.message.value.trim();
-
-    const subject = encodeURIComponent(`Contact via the portfolio page${name ? " – " + name : ""}`);
-    const body = encodeURIComponent(
-      `Name: ${name || "-"}\nEmail: ${email || "-"}\n\nMessage:\n${msg || "-"}\n`
-    );
-
-    // Enter your address here:
-    window.location.href = `mailto:laurasimila95@gmail.com?subject=${subject}&body=${body}`;
   });
 }
 

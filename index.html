@@ -226,24 +226,33 @@
           <p class="muted">Lightweight, static connection-no backend. You can switch from mailto → Formspark/Netlify later.</p>
         </div>
 
-        <form class="form" onsubmit="return false" aria-label="Contact form">
-          <label class="field">
-            <span>Name</span>
-            <input id="name" type="text" placeholder="First name Last name" />
-          </label>
-          <label class="field">
-            <span>Email</span>
-            <input id="email" type="email" placeholder="name@domain.fi" />
-          </label>
-          <label class="field">
-            <span>Message</span>
-            <textarea id="message" rows="5" placeholder="What would you like to discuss?"></textarea>
-          </label>
-          <div class="form__actions">
-            <button id="mailtoBtn" class="btn" type="button">Send by email</button>
-            <p class="muted small">Or: <a href="https://github.com/Llaamari" target="_blank" rel="noreferrer">GitHub</a></p>
-          </div>
-        </form>
+        <form
+        class="form"
+        action="https://submit-form.com/ZeHAsykhq"
+        method="POST"
+        >
+        <input type="hidden" name="_redirect" value="https://llaamari.github.io/portfolio/thank-you.html" />
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <label class="field">
+          <span>Name</span>
+          <input name="name" type="text" required />
+        </label>
+        
+        <label class="field">
+          <span>Email</span>
+          <input name="email" type="email" required />
+        </label>
+        
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        
+        <div class="form__actions">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
       </div>
     </section>
   </main>
