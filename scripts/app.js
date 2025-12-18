@@ -151,6 +151,9 @@ function render() {
 // Lightbox open function
 function openLightbox(src) {
   els.lightboxImage.src = src;
+
+  // make sure the dialog is visible
+  els.imageLightbox.hidden = false;
   els.imageLightbox.showModal();
 }
 
@@ -159,7 +162,10 @@ function closeLightbox() {
     els.imageLightbox.close();
   }
 
-  // important: clear the image and remove the focus
+  // Chromium bug fix
+  els.imageLightbox.hidden = true;
+
+  // clean up the space
   els.lightboxImage.src = "";
   document.activeElement?.blur();
 }
