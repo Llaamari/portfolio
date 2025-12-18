@@ -152,18 +152,15 @@ function openModal(p) {
     ? `<a class="btn btn--small" href="${links.demo}" target="_blank" rel="noreferrer">Live demo</a>`
     : "";
 
-  const images = (p.images || [])
-    .map(
-      (src) => `
-        <img
-          class="modal__image"
-          src="${src}"
-          alt=""
-          loading="lazy"
-        />
-      `
-    )
-    .join("");
+  const images = (p.images || []).length
+  ? `
+  <div class="modal__images">
+  ${(p.images || [])
+    .map(src => `<img class="modal__image" src="${src}" alt="" loading="lazy" />`)
+    .join("")}
+    </div>
+    `
+    : "";
 
   els.modalContent.innerHTML = `
     ${images}

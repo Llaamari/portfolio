@@ -235,14 +235,19 @@ input, select, textarea{
   transition: transform 0.2s ease;
 }
 
+/* Modal image grid (2 columns) */
+.modal__images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 /* Modal images */
 .modal__image {
-  display: block;
-  max-width: 520px;
   width: 100%;
   border-radius: 16px;
   border: 1px solid var(--line);
-  margin: 0 auto 12px;
 }
 .modal__image:last-of-type {
   margin-bottom: 20px;
@@ -302,9 +307,6 @@ input, select, textarea{
 }
 .modal::backdrop{background: rgba(0,0,0,.55)}
 .modal__inner{
-  row-gap: 12px;
-  display: grid;
-  grid-template-columns: 1fr;
   margin: 7vh auto 0;
   max-width: 760px;
   width: min(92vw, 760px);
@@ -314,23 +316,6 @@ input, select, textarea{
   box-shadow: var(--shadow);
   padding: 16px;
   position: relative;
-}
-
-/* Wrap images into a grid */
-.modal__inner > .modal__image {
-  justify-self: center;
-}
-
-.modal__inner:has(.modal__image) {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 12px;
-  grid-auto-rows: auto;
-}
-
-/* Create image grid */
-.modal__inner > .modal__image:first-of-type {
-  margin-top: 0;
 }
 .modal__close{position:absolute; right:14px; top:14px}
 .modal h3{margin-top: 2px}
@@ -378,6 +363,12 @@ input, select, textarea{
   .contact{grid-template-columns: 1fr}
   .hero__grid{grid-template-columns: 1fr}
   .nav{display:none}
+}
+
+@media (max-width: 640px) {
+  .modal__images {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce){
