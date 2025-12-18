@@ -1,43 +1,44 @@
 # Portfolio
 
-A personal portfolio showcasing my skills in front-end development, user interface refinement and accessibility.  
-The project was intentionally implemented without frameworks to ensure that the structure, code and user experience are clear and easy to understand.
+A modern personal portfolio showcasing my front-end skills, projects and approach to building clear, accessible user interfaces.  
+The site is intentionally built without frameworks to keep the structure lightweight, readable and easy to maintain.
 
-👉 Live: https://llaamari.github.io/portfolio/
+👉 Live site: https://llaamari.github.io/portfolio/
 
 ---
 
 ## ✨ Features
 
-- Clear and responsive single-page portfolio
-- Projects are retrieved from a JSON file (easy to maintain and expand)
+- Clean, responsive single-page portfolio
+- Projects loaded from a JSON file (easy to maintain and extend)
 - Project cards with image previews
-- More detailed presentation of projects in a modal window
-  - Multiple images in a two-column grid
-  - Project description, technologies and highlights
-- Search and filter projects
-- Dark/light theme (remembered in `localStorage`)
-- Accessibility taken into account:
-  - Keyboard support
-  - Focus states
-  - Semantic HTML
-- Contact form via Formspark
-- Separate "Thank you" page after submitting the form
+- Detailed project view in a modal
+  - multiple images displayed in a two-column grid
+  - project description, technologies and highlights
+  - clickable images with a lightbox view
+- Search and filter functionality for projects
+- Dark / light theme with persistence via `localStorage`
+- Accessibility-focused implementation:
+  - keyboard navigation
+  - visible focus states
+  - semantic HTML
+- Contact form powered by Formspark (no backend required)
+- Dedicated “Thank you” page after form submission
 
 ---
 
 ## 🛠️ Technologies
 
-- **HTML5** – semantic and accessible structure
-- **CSS3** – modern layout (Grid, Flexbox), themes and responsiveness
-- **JavaScript (Vanilla)** – UI logic, state, modals and theme management  
-- **Formspark** – form processing without a backend  
+- **HTML5** – semantic, accessible markup  
+- **CSS3** – modern layout (Grid & Flexbox), theming, responsiveness  
+- **JavaScript (Vanilla)** – UI logic, state handling, modals and theming  
+- **Formspark** – form handling without a custom backend  
 
-No frameworks – lightweight, fast and easy to read.
+No frameworks by design – the goal is clarity, performance and maintainability.
 
 ---
 
-## 📁 Project structure
+## 📁 Project Structure
 ```
 portfolio/
 ├── index.html
@@ -48,50 +49,50 @@ portfolio/
 │ └── styles.css
 ├── scripts/
 │ └── app.js
-└──assets/
+└── assets/
   ├── avatar.svg
   └── projects/
-    └──project pictures
+    └── project pictures
 ```
-- **projects.json** → all project information (texts, technologies, images)
-- **styles.css** → themes, layout and components
-- **app.js** → search, filtering, modals and theme management
-- **assets/projects/** → project image previews
+- **projects.json** → all project data (content, technologies, images)
+- **styles.css** → themes, layout and reusable components
+- **app.js** → filtering, search, modals, lightbox and theme logic
+- **assets/projects/** → project preview images
 
 ---
 
-## 🖼️ Project images
+## 🖼️ Project Images
 
-For each project, 1–4 images can be added to the `projects.json` file:
+Each project can define one or more images in `projects.json`:
 
 ```json
 "images": [
   "assets/projects/example-1.png",
   "assets/projects/example-2.png"
-   etc.
 ]
 ```
-- The first image is displayed as a preview on the project card.
-- All images are displayed in a two-column grid in the modal.
-- If there are no images, the UI still functions normally.
+- the first image is used as a preview in the project card
+- all images are shown in the modal in a responsive grid
+- images can be opened in a lightbox for a larger view
+- projects without images are handled gracefully
 
-## 🚀 Development and local driving
+## 🚀 Local Development
 
-The project can be opened directly in a browser or run on a local server:
+The project can be opened directly in a browser or served locally:
 ```bash
 python -m http.server 8000
 ```
-Open in browser:<br>
+Then open:<br>
 http://localhost:8000
 
-## 🎯 Project objectives
+## 🎯 Project Goals
 
-- Demonstrate expertise in front-end development and UI refinement
-- Emphasize accessibility and user experience
-- Keep code clear, readable and easily extensible
-- Serve as a realistic, production-level portfolio example
+- Demonstrate strong **front-end fundamentals**
+- Show attention to **UI detail, UX and accessibility**
+- Keep the codebase **clean, readable and extensible**
+- Serve as a realistic, production-level portfolio project
 
 ## 📬 Contact
 
-Please contact me via the form on my portfolio page or via my GitHub profile.<br>
-© Laura
+Feel free to reach out via the contact form on the website or through GitHub.<br>
+© Laura Similä
