@@ -237,10 +237,15 @@ input, select, textarea{
 
 /* Modal images */
 .modal__image {
+  display: block;
+  max-width: 520px;
   width: 100%;
   border-radius: 16px;
   border: 1px solid var(--line);
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+}
+.modal__image:last-of-type {
+  margin-bottom: 20px;
 }
 .tagrow{display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px}
 .tag{
