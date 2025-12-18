@@ -12,6 +12,11 @@ const els = {
   name: $("#name"),
   email: $("#email"),
   message: $("#message"),
+
+  // Lightbox elements
+  imageLightbox: $("#imageLightbox"),
+  lightboxImage: $("#lightboxImage"),
+  closeLightbox: $("#closeLightbox"),
 };
 
 const state = {
@@ -143,6 +148,12 @@ function render() {
   }
 }
 
+// Lightbox open function
+function openLightbox(src) {
+  els.lightboxImage.src = src;
+  els.imageLightbox.showModal();
+}
+
 function openModal(p) {
   const links = p.links || {};
   const repo = links.repo
@@ -153,12 +164,15 @@ function openModal(p) {
     : "";
 
   const images = (p.images || []).length
-  ? `
-  <div class="modal__images">
-  ${(p.images || [])
-    .map(src => `<img class="modal__image" src="${src}" alt="" loading="lazy" />`)
-    .join("")}
-    </div>
+    ? `
+      <div class="modal__images">
+        ${(p.images || [])
+          .map(
+            (src) =>
+              `<img class="modal__image" src="${src}" alt="" loading="lazy" />`
+          )
+          .join("")}
+      </div>
     `
     : "";
 
@@ -174,14 +188,16 @@ function openModal(p) {
         .join("")}
     </div>
 
-    ${p.highlights?.length
-      ? `<h4>Highlights</h4>
-         <ul class="muted">
-           ${p.highlights
-             .map((h) => `<li>${escapeHtml(h)}</li>`)
-             .join("")}
-         </ul>`
-      : ""}
+    ${
+      p.highlights?.length
+        ? `<h4>Highlights</h4>
+           <ul class="muted">
+             ${p.highlights
+               .map((h) => `<li>${escapeHtml(h)}</li>`)
+               .join("")}
+           </ul>`
+        : ""
+    }
 
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
       ${repo}
@@ -191,6 +207,14 @@ function openModal(p) {
 
   if (typeof els.modal.showModal === "function") {
     els.modal.showModal();
+
+    // Enable image click → lightbox
+    els.modalContent
+      .querySelectorAll(".modal__image")
+      .forEach((img) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => openLightbox(img.src));
+      });
   } else {
     alert(`${p.title}\n\n${p.description}`);
   }
@@ -239,8 +263,22 @@ function initHandlers() {
     if (!inside) closeModal();
   });
 
+  // Lightbox close handlers
+  els.closeLightbox.addEventListener("click", () => {
+    if (els.imageLightbox.open) els.imageLightbox.close();
+  });
+
+  els.imageLightbox.addEventListener("click", (e) => {
+    if (e.target === els.imageLightbox) {
+      els.imageLightbox.close();
+    }
+  });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") {
+      if (els.imageLightbox.open) els.imageLightbox.close();
+      else closeModal();
+    }
   });
 }
 
