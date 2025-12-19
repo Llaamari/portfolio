@@ -1,5 +1,37 @@
 [
   {
+    "title": "FastAPI Project",
+    "category": "Web Development",
+    "description": "A fast and scalable API built with FastAPI, integrated with PostgreSQL for data persistence and designed to manage tasks and users efficiently. The API supports authentication, user management and task handling features.",
+    "tech": ["FastAPI", "PostgreSQL", "SQLAlchemy"],
+    "highlights": ["Fast and efficient RESTful API built with FastAPI", "Database integration using PostgreSQL and SQLAlchemy", "Comprehensive user authentication and management system"],
+    "images": [
+      "assets/projects/portfolio-fastapi-1.png",
+      "assets/projects/portfolio-fastapi-2.png",
+      "assets/projects/portfolio-fastapi-3.png",
+      "assets/projects/portfolio-fastapi-4.png"
+    ],
+    "links": {
+      "repo": "https://github.com/Llaamari/portfolio-fastapi",
+      "demo page OTW": ""
+    }
+  },
+  {
+    "title": "Business Analytics SQL Project",
+    "category": "Data Analytics",
+    "description": "A portfolio-ready SQL analytics project that simulates a real-world sales database. The project demonstrates data modeling, advanced SQL querying and business insight generation using PostgreSQL. It answers key business questions around revenue growth, customer lifetime value and retention through cohort analysis.",
+    "tech": ["PostgreSQL", "SQL", "Docker"],
+    "highlights": ["Designed a relational data model optimized for analytical queries", "Built advanced SQL analyses including cohort-based customer retention", "Translated raw query results into actionable business insights"],
+    "images": [
+      "assets/projects/sql-business-analytics-1.png",
+      "assets/projects/sql-business-analytics-2.png",
+      "assets/projects/sql-business-analytics-3.png"
+    ],
+    "links": {
+      "repo": "https://github.com/Llaamari/sql-business-analytics"
+    }
+  },
+  {
     "title": "Personal Portfolio Website",
     "category": "Front-end",
     "description": "A personal portfolio showcasing my projects, skills and working methods. The site has been built without frameworks and focuses on clear structure, good user experience and accessibility.",
@@ -14,31 +46,6 @@
     "links": {
       "repo": "https://github.com/Llaamari/portfolio",
       "demo": "https://llaamari.github.io/portfolio/"
-    }
-  },
-  {
-    "title": "Business Analytics SQL Project",
-    "category": "Data Analytics",
-    "description": "A portfolio-ready SQL analytics project that simulates a real-world sales database. The project demonstrates data modeling, advanced SQL querying and business insight generation using PostgreSQL. It answers key business questions around revenue growth, customer lifetime value and retention through cohort analysis.",
-    "tech": ["PostgreSQL", "SQL", "Docker"],
-    "highlights": ["Designed a relational data model optimized for analytical queries", "Built advanced SQL analyses including cohort-based customer retention", "Translated raw query results into actionable business insights"],
-    "images": [
-      "assets/projects/sql-business-analytics-1.png",
-      "assets/projects/sql-business-analytics-2.png"
-    ],
-    "links": {
-      "repo": "https://github.com/Llaamari/sql-business-analytics"
-    }
-  },
-  {
-    "title": "Taskboard (Vanilla)",
-    "category": "Web App",
-    "description": "Kanban-style taskboard with localStorage saving. Drag & drop style can be added later. ",
-    "tech": ["JavaScript", "LocalStorage", "CSS Grid"],
-    "highlights": ["CRUD", "Filtering", "Persistence"],
-    "links": {
-      "repo": "https://github.com/yourname/taskboard-vanilla",
-      "demo": "https://yourname.github.io/taskboard-vanilla/"
     }
   }
 ]
