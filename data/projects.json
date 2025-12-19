@@ -3,8 +3,8 @@
     "title": "FastAPI Project",
     "category": "Web Development",
     "description": "A fast and scalable API built with FastAPI, integrated with PostgreSQL for data persistence and designed to manage tasks and users efficiently. The API supports authentication, user management and task handling features.",
-    "tech": ["FastAPI", "PostgreSQL", "Docker"],
-    "highlights": ["Fast and efficient RESTful API built with FastAPI", "Database integration using PostgreSQL and Docker", "Comprehensive user authentication and management system"],
+    "tech": ["FastAPI", "PostgreSQL", "SQLAlchemy"],
+    "highlights": ["Fast and efficient RESTful API built with FastAPI", "Database integration using PostgreSQL and SQLAlchemy", "Comprehensive user authentication and management system"],
     "images": [
       "assets/projects/portfolio-fastapi-1.png",
       "assets/projects/portfolio-fastapi-3.png",
@@ -13,7 +13,7 @@
     ],
     "links": {
       "repo": "https://github.com/Llaamari/portfolio-fastapi",
-      "demo page OTW": "#"
+      "demo": "Coming Soon"
     }
   },
   {
