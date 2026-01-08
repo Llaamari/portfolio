@@ -1,5 +1,20 @@
 [
   {
+    "title": "Speden Spelit – Arduino Reaction Game",
+    "category": "Embedded Systems",
+    "description": "An Arduino-based reaction game developed as a team project during the Application Project course at Oulu University of Applied Sciences. The project focuses on interrupt-driven programming, modular C++ design and hardware–software interaction using buttons, LEDs, displays, sound and EEPROM-based high score storage.",
+    "tech": ["Arduino", "C++", "Interrupts"],
+    "highlights": ["Implemented interrupt-driven button handling with software debouncing", "Designed modular embedded software architecture (game logic, buttons, LEDs, display)", "Developed EEPROM-based high score system and dynamic game speed control"],
+    "images": [
+      "assets/projects/portfolio-speden-spelit-1.png",
+      "assets/projects/portfolio-speden-spelit-2.png"
+    ],
+    "links": {
+      "repo": "https://github.com/Llaamari/Speden-Spelit",
+      "demo": "https://drive.google.com/file/d/1BP8mjp6vmrVlAaKURobh-cAQ5VSyjZxa/view?usp=sharing"
+    }
+  },
+  {
     "title": "FastAPI Project",
     "category": "Web Development",
     "description": "A fast and scalable API built with FastAPI, integrated with PostgreSQL for data persistence and designed to manage tasks and users efficiently. The API supports authentication, user management and task handling features.",
