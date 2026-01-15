@@ -34,15 +34,6 @@ body{
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
-img, svg {
-  max-width: 100%;
-  height: auto;
-}
-
 a{color:inherit; text-decoration: none}
 a:hover{opacity:.92}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
