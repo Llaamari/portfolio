@@ -34,6 +34,15 @@ body{
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 a{color:inherit; text-decoration: none}
 a:hover{opacity:.92}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
@@ -417,6 +426,40 @@ input, select, textarea{
 @media (max-width: 640px) {
   .modal__images {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar__inner {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .topbar__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .btn__text {
+    display: none; /* hides the "Theme" text, leaves space for the icon */
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__cta .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .chips .chip:nth-child(n+7) {
+    display: none; /* only the first 6 are displayed */
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
 
