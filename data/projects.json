@@ -1,21 +1,5 @@
 [
   {
-    "title": "Code-Q Oy Website",
-    "category": "Web Development",
-    "description": "I designed and built a WordPress website for my former employer, Code-Q Oy. I was responsible for the site structure, visual layout and content implementation, ensuring the website is clear, user-friendly and easy to maintain.",
-    "tech": ["WordPress", "HTML", "CSS"],
-    "highlights": ["Designed and developed the entire website from start to finish", "Made it responsive and accessible", "Dual language support (Finnish and English)"],
-    "images": [
-      "assets/projects/website-1.png",
-      "assets/projects/website-2.png",
-      "assets/projects/website-3.png",
-      "assets/projects/website-4.png"
-    ],
-    "links": {
-      "demo": "https://www.code-q.fi/en/front-page/"
-    }
-  },
-  {
     "title": "Speden Spelit – Arduino Reaction Game",
     "category": "Embedded Systems",
     "description": "An Arduino-based reaction game developed as a team project during the Application Project course at Oulu University of Applied Sciences. The project focuses on interrupt-driven programming, modular C++ design and hardware–software interaction using buttons, LEDs, displays, sound and EEPROM-based high score storage.",
@@ -59,6 +43,22 @@
     ],
     "links": {
       "repo": "https://github.com/Llaamari/sql-business-analytics"
+    }
+  },
+  {
+    "title": "Code-Q Oy Website",
+    "category": "Web Development",
+    "description": "I designed and built a WordPress website for my former employer, Code-Q Oy. I was responsible for the site structure, visual layout and content implementation, ensuring the website is clear, user-friendly and easy to maintain.",
+    "tech": ["WordPress", "HTML", "CSS"],
+    "highlights": ["Designed and developed the entire website from start to finish", "Made it responsive and accessible", "Dual language support (Finnish and English)"],
+    "images": [
+      "assets/projects/website-1.png",
+      "assets/projects/website-2.png",
+      "assets/projects/website-3.png",
+      "assets/projects/website-4.png"
+    ],
+    "links": {
+      "demo": "https://www.code-q.fi/en/front-page/"
     }
   },
   {
