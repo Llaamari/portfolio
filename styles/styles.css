@@ -429,36 +429,6 @@ input, select, textarea{
   }
 }
 
-@media (max-width: 520px) {
-  .topbar__inner {
-    padding: 12px 16px;
-    flex-wrap: wrap;
-  }
-
-  .topbar__actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  .hero__cta {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero__cta .btn {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .chips .chip:nth-child(n+7) {
-    display: none; /* only the first 6 are displayed */
-  }
-
-  .container {
-    padding: 0 16px;
-  }
-}
-
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .project{transition:none}
