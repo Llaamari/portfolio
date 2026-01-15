@@ -420,6 +420,12 @@ input, select, textarea{
   }
 }
 
+@media (max-width: 520px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .project{transition:none}
