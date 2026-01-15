@@ -53,9 +53,9 @@
     "highlights": ["Designed and developed the entire website from start to finish", "Made it responsive and accessible", "Dual language support (Finnish and English)"],
     "images": [
       "assets/projects/website-1.png",
-      "assets/projects/website-2.png",
       "assets/projects/website-3.png",
-      "assets/projects/website-4.png"
+      "assets/projects/website-4.png",
+      "assets/projects/website-2.png"
     ],
     "links": {
       "demo": "https://www.code-q.fi/en/front-page/"
@@ -69,9 +69,9 @@
     "highlights": ["Responsive and accessible user interface", "Projects loaded from JSON file and displayed in modal", "Dark/light theme with localStorage support"],
     "images": [
       "assets/projects/portfolio-website-1.png",
+      "assets/projects/portfolio-website-2.png",
       "assets/projects/portfolio-website-3.png",
-      "assets/projects/portfolio-website-4.png",
-      "assets/projects/portfolio-website-2.png"
+      "assets/projects/portfolio-website-4.png"
     ],
     "links": {
       "repo": "https://github.com/Llaamari/portfolio",
