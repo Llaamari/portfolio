@@ -6,10 +6,10 @@
     "tech": ["Qt", "C++", "Node.js"],
     "highlights": ["Implemented a REST API with Node.js", "Designed seed data for the MySQL database", "Built a Qt desktop ATM interface with inactivity timeout and error handling"],
     "images": [
-      "assets/projects/bank-atm-1.png",
-      "assets/projects/bank-atm-2.png",
-      "assets/projects/bank-atm-3.png",
-      "assets/projects/bank-atm-4.png"
+      "assets/projects/bank-atm-system-1.png",
+      "assets/projects/bank-atm-system-2.png",
+      "assets/projects/bank-atm-system-3.png",
+      "assets/projects/bank-atm-system-4.png"
     ],
     "links": {
       "repo": "https://github.com/25kmo-project/group_2",
