@@ -1,5 +1,22 @@
 [
   {
+    "title": "Bank ATM System",
+    "category": "Full Stack Application",
+    "description": "A full-stack ATM simulation system built as a software engineering project. The system consists of a Qt C++ desktop application, a Node.js REST API backend and a MySQL database with stored procedures. Users can authenticate using a card number and PIN, check account balances, withdraw money from debit or credit accounts and view transaction history. The project demonstrates secure authentication, role-based access control and a realistic banking data model.",
+    "tech": ["Qt", "C++", "Node.js"],
+    "highlights": ["Implemented a REST API with Node.js", "Designed seed data for the MySQL database", "Built a Qt desktop ATM interface with inactivity timeout and error handling"],
+    "images": [
+      "assets/projects/bank-atm-1.png",
+      "assets/projects/bank-atm-2.png",
+      "assets/projects/bank-atm-3.png",
+      "assets/projects/bank-atm-4.png"
+    ],
+    "links": {
+      "repo": "https://github.com/25kmo-project/group_2",
+      "demo": "https://www.youtube.com/watch?v=HIWrV-bBajI"
+    }
+  },
+  {
     "title": "Speden Spelit – Arduino Reaction Game",
     "category": "Embedded Systems",
     "description": "An Arduino-based reaction game developed as a team project during the Application Project course at Oulu University of Applied Sciences. The project focuses on interrupt-driven programming, modular C++ design and hardware–software interaction using buttons, LEDs, displays, sound and EEPROM-based high score storage.",
