@@ -1,42 +1,37 @@
 # Portfolio
 
-A modern personal portfolio showcasing my front-end skills, projects and approach to building clear, accessible user interfaces.  
+A modern personal portfolio showcasing my software development projects across web development, backend programming, databases and embedded systems.  
 The site is intentionally built without frameworks to keep the structure lightweight, readable and easy to maintain.
 
 Live site: https://llaamari.github.io/portfolio/
 
----
-
 ## Features
 
 - Clean, responsive single-page portfolio
-- Projects loaded from a JSON file (easy to maintain and extend)
-- Project cards with image previews
-- Detailed project view in a modal
-  - multiple images displayed in a two-column grid
-  - project description, technologies and highlights
+- Projects loaded from a JSON file for easy maintenance and extension
+- Project cards with image previews, categories and technologies
+- Detailed modal view with:
+  - multiple project images in a responsive grid
+  - project description, technologies and key implementation highlights
   - clickable images with a lightbox view
-- Search and filter functionality for projects
+- Search and category filtering for browsing projects
 - Dark / light theme with persistence via `localStorage`
 - Accessibility-focused implementation:
   - keyboard navigation
   - visible focus states
   - semantic HTML
-- Contact form powered by Formspark (no backend required)
+- Contact form powered by Formspark (no custom backend required)
 - Dedicated “Thank you” page after form submission
-
----
 
 ## Technologies
 
 - **HTML5** – semantic, accessible markup  
-- **CSS3** – modern layout (Grid & Flexbox), theming, responsiveness  
-- **JavaScript (Vanilla)** – UI logic, state handling, modals and theming  
+- **CSS3** – modern layout with Grid, Flexbox, theming and responsive behavior  
+- **JavaScript (Vanilla)** – UI logic, project rendering, filtering, modal and lightbox handling  
+- **JSON** – structured project content separated from the UI layer  
 - **Formspark** – form handling without a custom backend  
 
 No frameworks by design – the goal is clarity, performance and maintainability.
-
----
 
 ## Project Structure
 ```
@@ -50,7 +45,7 @@ portfolio/
 ├── scripts/
 │ └── app.js
 └── assets/
-  ├── avatar.svg
+  ├── avatar.png
   └── projects/
     └── project pictures
 ```
@@ -58,8 +53,6 @@ portfolio/
 - **styles.css** → themes, layout and reusable components
 - **app.js** → filtering, search, modals, lightbox and theme logic
 - **assets/projects/** → project preview images
-
----
 
 ## Project Images
 
@@ -87,10 +80,11 @@ http://localhost:8000
 
 ## Project Goals
 
-- Demonstrate strong **front-end fundamentals**
-- Show attention to **UI detail, UX and accessibility**
+- Present software projects in a way that is clear and easy to browse
+- Demonstrate strong **HTML, CSS and JavaScript fundamentals**
+- Show attention to **UI detail, UX, accessibility and maintainability**
 - Keep the codebase **clean, readable and extensible**
-- Serve as a realistic, production-level portfolio project
+- Serve as a realistic portfolio project that can be updated as new work is added
 
 ## Contact
 
