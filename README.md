@@ -3,11 +3,11 @@
 A modern personal portfolio showcasing my front-end skills, projects and approach to building clear, accessible user interfaces.  
 The site is intentionally built without frameworks to keep the structure lightweight, readable and easy to maintain.
 
-👉 Live site: https://llaamari.github.io/portfolio/
+Live site: https://llaamari.github.io/portfolio/
 
 ---
 
-## ✨ Features
+## Features
 
 - Clean, responsive single-page portfolio
 - Projects loaded from a JSON file (easy to maintain and extend)
@@ -27,7 +27,7 @@ The site is intentionally built without frameworks to keep the structure lightwe
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - **HTML5** – semantic, accessible markup  
 - **CSS3** – modern layout (Grid & Flexbox), theming, responsiveness  
@@ -38,7 +38,7 @@ No frameworks by design – the goal is clarity, performance and maintainability
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 portfolio/
 ├── index.html
@@ -61,7 +61,7 @@ portfolio/
 
 ---
 
-## 🖼️ Project Images
+## Project Images
 
 Each project can define one or more images in `projects.json`:
 
@@ -76,7 +76,7 @@ Each project can define one or more images in `projects.json`:
 - images can be opened in a lightbox for a larger view
 - projects without images are handled gracefully
 
-## 🚀 Local Development
+## Local Development
 
 The project can be opened directly in a browser or served locally:
 ```bash
@@ -85,14 +85,14 @@ python -m http.server 8000
 Then open:<br>
 http://localhost:8000
 
-## 🎯 Project Goals
+## Project Goals
 
 - Demonstrate strong **front-end fundamentals**
 - Show attention to **UI detail, UX and accessibility**
 - Keep the codebase **clean, readable and extensible**
 - Serve as a realistic, production-level portfolio project
 
-## 📬 Contact
+## Contact
 
 Feel free to reach out via the contact form on the website or through GitHub.<br>
 © Laura Similä
