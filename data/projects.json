@@ -3,8 +3,16 @@
     "title": "Bank ATM System",
     "category": "Full Stack Application",
     "description": "A full-stack ATM simulation system built as a software engineering project. The system consists of a Qt C++ desktop application, a Node.js REST API backend and a MySQL database with stored procedures. Users can authenticate using a card number and PIN, check account balances, withdraw money from debit or credit accounts and view transaction history. The project demonstrates secure authentication, role-based access control and a realistic banking data model.",
-    "tech": ["Qt", "C++", "Node.js"],
-    "highlights": ["Implemented a REST API with Node.js", "Designed seed data for the MySQL database", "Built a Qt desktop ATM interface with inactivity timeout and error handling"],
+    "tech": [
+      "Qt",
+      "C++",
+      "Node.js"
+    ],
+    "highlights": [
+      "Implemented a REST API with JWT authentication and role-based authorization",
+      "Designed a relational banking database with stored procedures and account-card relationships",
+      "Built a Qt desktop ATM interface with inactivity timeout and transaction history"
+    ],
     "images": [
       "assets/projects/bank-atm-system-1.png",
       "assets/projects/bank-atm-system-2.png",
@@ -20,8 +28,16 @@
     "title": "Speden Spelit – Arduino Reaction Game",
     "category": "Embedded Systems",
     "description": "An Arduino-based reaction game developed as a team project during the Application Project course at Oulu University of Applied Sciences. The project focuses on interrupt-driven programming, modular C++ design and hardware–software interaction using buttons, LEDs, displays, sound and EEPROM-based high score storage.",
-    "tech": ["Arduino", "C++", "Interrupts"],
-    "highlights": ["Implemented interrupt-driven button handling with software debouncing", "Designed modular embedded software architecture (game logic, buttons, LEDs, display)", "Developed EEPROM-based high score system and dynamic game speed control"],
+    "tech": [
+      "Arduino",
+      "C++",
+      "Interrupts"
+    ],
+    "highlights": [
+      "Implemented interrupt-driven button handling with software debouncing",
+      "Designed modular embedded software architecture (game logic, buttons, LEDs, display)",
+      "Developed EEPROM-based high score system and dynamic game speed control"
+    ],
     "images": [
       "assets/projects/speden-spelit-1.png",
       "assets/projects/speden-spelit-2.png"
@@ -35,8 +51,16 @@
     "title": "FastAPI Project",
     "category": "Web Development",
     "description": "A fast and scalable API built with FastAPI, integrated with PostgreSQL for data persistence and designed to manage tasks and users efficiently. The API supports authentication, user management and task handling features.",
-    "tech": ["FastAPI", "PostgreSQL", "SQLAlchemy"],
-    "highlights": ["Fast and efficient RESTful API built with FastAPI", "Database integration using PostgreSQL and SQLAlchemy", "Comprehensive user authentication and management system"],
+    "tech": [
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy"
+    ],
+    "highlights": [
+      "Fast and efficient RESTful API built with FastAPI",
+      "Database integration using PostgreSQL and SQLAlchemy",
+      "Comprehensive user authentication and management system"
+    ],
     "images": [
       "assets/projects/portfolio-fastapi-1.png",
       "assets/projects/portfolio-fastapi-3.png",
@@ -51,8 +75,16 @@
     "title": "Business Analytics SQL Project",
     "category": "Data Analytics",
     "description": "A portfolio-ready SQL analytics project that simulates a real-world sales database. The project demonstrates data modeling, advanced SQL querying and business insight generation using PostgreSQL. It answers key business questions around revenue growth, customer lifetime value and retention through cohort analysis.",
-    "tech": ["PostgreSQL", "SQL", "Docker"],
-    "highlights": ["Designed a relational data model optimized for analytical queries", "Built advanced SQL analyses including cohort-based customer retention", "Translated raw query results into actionable business insights"],
+    "tech": [
+      "PostgreSQL",
+      "SQL",
+      "Docker"
+    ],
+    "highlights": [
+      "Designed a relational data model optimized for analytical queries",
+      "Built advanced SQL analyses including cohort-based customer retention",
+      "Translated raw query results into actionable business insights"
+    ],
     "images": [
       "assets/projects/sql-business-analytics-1.png",
       "assets/projects/sql-business-analytics-2.png",
@@ -66,8 +98,16 @@
     "title": "Code-Q Oy Website",
     "category": "Web Development",
     "description": "I designed and built a WordPress website for my former employer, Code-Q Oy. I was responsible for the site structure, visual layout and content implementation, ensuring the website is clear, user-friendly and easy to maintain.",
-    "tech": ["WordPress", "HTML", "CSS"],
-    "highlights": ["Designed and developed the entire website from start to finish", "Made it responsive and accessible", "Dual language support (Finnish and English)"],
+    "tech": [
+      "WordPress",
+      "HTML",
+      "CSS"
+    ],
+    "highlights": [
+      "Designed and developed the entire website from start to finish",
+      "Made it responsive and accessible",
+      "Dual language support (Finnish and English)"
+    ],
     "images": [
       "assets/projects/website-1.png",
       "assets/projects/website-2.png",
@@ -81,9 +121,17 @@
   {
     "title": "Personal Portfolio Website",
     "category": "Front-end",
-    "description": "A personal portfolio showcasing my projects, skills and working methods. The site has been built without frameworks and focuses on clear structure, good user experience and accessibility.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "highlights": ["Responsive and accessible user interface", "Projects loaded from JSON file and displayed in modal", "Dark/light theme with localStorage support"],
+    "description": "A personal portfolio website built without frameworks to showcase selected software projects in web development, backend programming, databases and embedded systems. The site focuses on clear structure, accessibility and maintainable front-end architecture.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "highlights": [
+      "Projects loaded from a JSON file with search and category filtering",
+      "Detailed modal view with multiple images and lightbox support",
+      "Responsive dark/light theme with localStorage persistence"
+    ],
     "images": [
       "assets/projects/portfolio-website-1.png",
       "assets/projects/portfolio-website-2.png",
